@@ -1,0 +1,413 @@
+
+--------Inserindo dados nas tabelas 
+
+--- Tabela Cliente 
+select * from cliente 
+insert into cliente values
+( '2024-09-08','Maria','Vieira','24082197010','av Luis Antonio  500','05/12/1978'),
+( '2024-08-12','Zoe','Araujo','57483330074','  clelia 500','08/10/1990'),
+( '2024-07-01','Maya','Oliveira','22828616045','Faria Lima','14/09/1985'),
+( '2025-01-15','Pedro','Martins','48413970008','Luis Augusto  345','02/09/1989'),
+( '2025-01-08','Leonardo','Marques','23351162073','Marechal Teodoro 890','19/10/1985'),
+( '2025-02-01','Felipe','Santos','58773546046','Monteiro de Mello 5432','07/08/1981');
+
+--- adicionando a coluna ValorCusto na tabela produto
+alter table produto add ValorCusto float 
+
+--- Tabela  produto  
+select * from produto  
+INSERT INTO produto  VALUES 
+('Notebook Dell Inspiron', 'Informática', 4500.00, 3200.00),
+('Smartphone Samsung Galaxy S22', 'Eletrônicos', 3500.00, 2500.00),
+('Teclado Mecânico RGB', 'Periféricos', 350.00, 200.00),
+('Mouse Sem Fio Logitech', 'Periféricos', 150.00, 90.00),
+('Monitor 27" 4K LG', 'Informática', 2200.00, 1800.00),
+('Cadeira Gamer', 'Móveis', 1200.00, 800.00),
+('Impressora Multifuncional HP', 'Escritório', 900.00, 600.00),
+('HD Externo 1TB', 'Armazenamento', 400.00, 250.00),
+('SSD NVMe 1TB', 'Armazenamento', 600.00, 400.00),
+('Headset Gamer HyperX', 'Periféricos', 500.00, 350.00),
+('Tablet Apple iPad Air', 'Eletrônicos', 4200.00, 3000.00),
+('Placa de Vídeo RTX 3060', 'Hardware', 2800.00, 2000.00),
+('Memória RAM 16GB DDR4', 'Hardware', 600.00, 400.00),
+('Processador Intel Core i7', 'Hardware', 1800.00, 1300.00),
+('Fonte 750W Corsair', 'Hardware', 700.00, 500.00),
+('Gabinete Gamer RGB', 'Hardware', 850.00, 600.00),
+('Webcam Full HD Logitech', 'Periféricos', 300.00, 200.00),
+('Roteador Wi-Fi 6 TP-Link', 'Redes', 650.00, 450.00),
+('Switch Gigabit 8 Portas', 'Redes', 350.00, 250.00),
+('Controle Xbox Series X', 'Acessórios', 450.00, 300.00),
+('Microfone Condensador USB', 'Áudio', 550.00, 380.00),
+('Caixa de Som JBL Bluetooth', 'Áudio', 700.00, 500.00),
+('Smartwatch Xiaomi Mi Band 7', 'Eletrônicos', 350.00, 200.00),
+('Carregador Turbo 65W', 'Acessórios', 250.00, 150.00),
+('Notebook Lenovo ThinkPad', 'Informática', 4800.00, 3400.00),
+('Camera Canon EOS Rebel T7', 'Fotografia', 3200.00, 2500.00),
+('Lente 50mm f/1.8 Canon', 'Fotografia', 900.00, 650.00),
+('Tripé Profissional', 'Fotografia', 450.00, 300.00),
+('Drone DJI Mini 2', 'Fotografia', 4800.00, 3700.00);
+
+
+----- Tabela pedido 
+INSERT INTO pedido VALUES 
+(1, 'Compra de eletrônicos e acessórios', '2024-03-01', 'Em andamento', 30.00),
+(2, 'Pedido de periféricos para home office', '2024-03-02', 'Concluído', 25.00),
+(3, 'Aquisição de hardware para upgrade de PC', '2024-03-03', 'Cancelado', 50.00),
+(4, 'Compra de móveis para escritório', '2024-03-04', 'Em andamento', 40.00),
+(5, 'Equipamentos de áudio e vídeo', '2024-03-05', 'Pendente', 35.00),
+(6, 'Pedido de smartphone e acessórios', '2024-03-06', 'Concluído', 20.00),
+(7, 'Compra de notebooks para empresa', '2024-03-07', 'Em andamento', 60.00),
+(8, 'Pedido de gadgets e smart devices', '2024-03-08', 'Cancelado', 15.00),
+(9, 'Compra de equipamentos de fotografia', '2024-03-09', 'Pendente', 45.00),
+(10, 'Pedido de peças para montagem de PC', '2024-03-10', 'Concluído', 55.00),
+(11, 'Aquisição de impressora e suprimentos', '2024-03-11', 'Em andamento', 30.00),
+(12, 'Pedido de roteadores e equipamentos de rede', '2024-03-12', 'Concluído', 20.00),
+(13, 'Compra de acessórios para games', '2024-03-13', 'Pendente', 25.00),
+(14, 'Pedido de drones e equipamentos de filmagem', '2024-03-14', 'Em andamento', 50.00),
+(15, 'Aquisição de monitores e teclados', '2024-03-15', 'Concluído', 40.00);
+
+--Teste 
+select * from pedido  
+select  p.id as IDPedido, e.Id as IDEntrega, p.Descricao , p.StatusPedido  , e.StatusEntrega ,e.CodigoRastreio , c.Nome from pedido  p 
+join entrega e on p.id=e.IDPedido
+join cliente c on p.IDcliente =c.Id
+
+
+--- ALTER TABLE entrega ALTER COLUMN codigorastreio varchar(45);  
+
+--------- Tabela entrega
+
+ 
+INSERT INTO entrega (idpedido, statusentrega, datacadastro, codigorastreio) VALUES 
+(1, 'Em transporte', '2024-03-02', 'BR1234567890'),
+(2, 'Entregue', '2024-03-03', 'BR0987654321'),
+(3, 'Cancelado', '2024-03-04', NULL),
+(4, 'Aguardando envio', '2024-03-05', 'BR1122334455'),
+(5, 'Pendente', '2024-03-06', NULL),
+(6, 'Entregue', '2024-03-07', 'BR5566778899'),
+(7, 'Em transporte', '2024-03-08', 'BR6677889900'),
+(8, 'Cancelado', '2024-03-09', NULL),
+(9, 'Aguardando envio', '2024-03-10', 'BR2233445566'),
+(10, 'Entregue', '2024-03-11', 'BR3344556677'),
+(11, 'Em transporte', '2024-03-12', 'BR4455667788'),
+(12, 'Entregue', '2024-03-13', 'BR5566778899'),
+(13, 'Pendente', '2024-03-14', NULL),
+(14, 'Aguardando envio', '2024-03-15', 'BR6677889900'),
+(15, 'Entregue', '2024-03-16', 'BR7788990011');
+
+-- teste 
+select  p.id as IDPedido, e.Id as IDEntrega, p.Descricao , p.StatusPedido  , e.StatusEntrega ,e.CodigoRastreio , c.Nome from pedido  p 
+join entrega e on p.id=e.IDPedido
+join cliente c on p.IDcliente =c.Id
+
+
+
+--------- Tabela pagamento 
+
+select * from pagamento 
+
+INSERT INTO pagamento  VALUES 
+(2, 'Boleto Bancário', 'Pago', 980.00),
+(3, 'Pix', 'Cancelado', 2500.00),
+(4, 'Cartão de Débito', 'Pendente', 1340.00),
+(5, 'Transferência Bancária', 'Aguardando pagamento', 1750.00),
+(6, 'Cartão de Crédito', 'Pago', 2200.00),
+(7, 'Boleto Bancário', 'Pendente', 4800.00),
+(8, 'Pix', 'Cancelado', 890.00),
+(9, 'Cartão de Débito', 'Aguardando pagamento', 2375.00),
+(10, 'Transferência Bancária', 'Pago', 3120.00),
+(11, 'Cartão de Crédito', 'Pago', 1450.00),
+(12, 'Boleto Bancário', 'Pago', 870.00),
+(13, 'Pix', 'Pendente', 650.00),
+(14, 'Cartão de Débito', 'Aguardando pagamento', 2100.00),
+(15, 'Transferência Bancária', 'Pago', 3250.00);
+
+
+--------- Tabela estoque  
+
+
+select * from estoque
+begin  tran  -commit 
+delete from estoque 
+
+INSERT INTO estoque VALUES 
+('Armazém Central', 500),
+('Filial São Paulo', 300),
+('Filial Rio de Janeiro', 250),
+('Filial Belo Horizonte', 200),
+('Filial Curitiba', 180),
+('Centro de Distribuição Norte', 400),
+('Centro de Distribuição Sul', 350),
+('Depósito Recife', 220),
+('Depósito Salvador', 210),
+('Depósito Porto Alegre', 230),
+('Loja Online', 1000),
+('Estoque Externo', 150),
+('Armazém Secundário', 450),
+('Ponto de Retirada Campinas', 120),
+('Ponto de Retirada Fortaleza', 130),
+('Filial Brasília', 280),
+('Filial Manaus', 190),
+('Filial Goiânia', 170),
+('Filial Vitória', 160),
+('Centro de Distribuição Nordeste', 370),
+('Centro de Distribuição Centro-Oeste', 390),
+('Depósito Belém', 240),
+('Depósito Florianópolis', 260),
+('Depósito João Pessoa', 200),
+('Depósito Maceió', 210),
+('Depósito Teresina', 180),
+('Depósito Campo Grande', 230),
+('Depósito Cuiabá', 195),
+('Ponto de Retirada São Luís', 140),
+('Ponto de Retirada Natal', 145),
+('Ponto de Retirada Aracaju', 135),
+('Ponto de Retirada Porto Velho', 125),
+('Ponto de Retirada Boa Vista', 110),
+('Ponto de Retirada Rio Branco', 115),
+('Ponto de Retirada Macapá', 100),
+('Estoque Loja Física 1', 275),
+('Estoque Loja Física 2', 290),
+('Estoque Loja Física 3', 310),
+('Estoque Loja Física 4', 320);
+
+
+--------- Tabela produto estoque 
+
+
+select * from estoque ---39 
+select * from PRODUTO ---39
+INSERT INTO PRODUTO_ESTOQUE  VALUES 
+(1, 16),
+(2, 17),
+(3, 18),
+(4, 19),
+(5, 20),
+(6, 21),
+(7, 22),
+(8, 23),
+(9, 24),
+(10, 25),
+(11, 26),
+(12, 27),
+(13, 28),
+(14, 29),
+(15, 30),
+(16, 31),
+(17, 32),
+(18, 33),
+(19, 34),
+(20, 35),
+(21, 36),
+(22, 37),
+(23, 38),
+(24, 39),
+(25, 40),
+(26, 41),
+(27, 42),
+(28, 43),
+(29, 44),
+(30, 45),
+(31, 46),
+(32, 47),
+(33, 48),
+(34, 49),
+(35, 50),
+(36, 51),
+(37, 52),
+(38, 53),
+(39, 54)
+
+select * from PRODUTO_ESTOQUE t
+join produto p on t.IdProduto =p.Id
+join estoque e on t.IdEstoque=e.id
+
+
+
+---Tabela produto_pedido
+
+select * from pedido ---1- 16
+select * from PRODUTO ---39
+
+INSERT INTO PRODUTO_PEDIDO  VALUES 
+(1, 1, 2),
+(2, 2, 1),
+(3, 3, 3),
+(4, 4, 1),
+(5, 5, 2),
+(6, 6, 1),
+(7, 7, 5),
+(8, 8, 2),
+(9, 9, 3),
+(10, 10, 1),
+(11, 11, 4),
+(12, 12, 2),
+(13, 13, 1),
+(14, 14, 3),
+(15, 15, 2),
+(16, 1, 1),
+(17, 2, 2),
+(18, 3, 1),
+(19, 4, 4),
+(20, 5, 3),
+(21, 6, 2),
+(22, 7, 1),
+(23, 8, 2),
+(24, 9, 1),
+(25, 10, 5),
+(26, 11, 3),
+(27, 12, 2),
+(28, 13, 4),
+(29, 14, 1),
+(30, 15, 3),
+(34, 2, 1),
+(35, 2, 1),
+(36, 4, 1),
+(37, 4, 1);
+
+select * from PRODUTO_PEDIDO     pp
+join pedido d on pp.IdPedido=d.Id
+join produto pt on pp.IdProduto=pt.Id
+where IdPedido =2
+
+--- Tabela Vendedor 
+
+---exec sp_help vendedor  
+ select * from VENDEDOR
+
+INSERT INTO vendedor  VALUES 
+('Tech Solutions LTDA', '12345678000190', '(11) 98765-4321'),
+('Eletrônicos Brasil SA', '98765432000112', '(21) 99876-5432'),
+('Mega Computadores LTDA', '45678901000134', '(31) 91234-5678'),
+('Gamer World Comércio', '56789012000145', '(41) 92345-6789'),
+('Alpha Tecnologia LTDA', '67890123000156', '(51) 93456-7890'),
+('Smart Devices Comércio', '78901234000167', '(61) 94567-8901'),
+('Hardware & Cia LTDA', '89012345000178', '(71) 95678-9012'),
+('Conectech Distribuidora', '90123456000189', '(81) 96789-0123'),
+('MobiTech SA', '01234567000190', '(91) 97890-1234'),
+('Digital Trends LTDA', '23456789000101', '(95) 98901-2345'),
+('Periféricos e Acessórios LTDA', '34567890000112', '(92) 99012-3456'),
+('Top Gadgets Comércio', '45678901000123', '(85) 90123-4567'),
+('SuperTech Eletro', '56789012000134', '(79) 91234-5678'),
+('Best Hardware SA', '67890123000145', '(83) 92345-6789'),
+('EletroWorld LTDA', '78901234000156', '(98) 93456-7890');
+
+
+--- Tabela produto_vendedor 
+
+select * from VENDEDOR
+select * from  produto 
+select * from PRODUTO_VENDEDOR
+
+INSERT INTO produto_vendedor  VALUES 
+(1, 2, 10),
+(2, 2, 20),
+(3, 3, 15),
+(4, 4, 30),
+(5, 5, 25),
+(6, 6, 12),
+(7, 7, 18),
+(8, 8, 22),
+(9, 9, 35),
+(10, 10, 40),
+(11, 11, 50),
+(12, 12, 60),
+(13, 13, 14),
+(14, 14, 30),
+(15, 15, 45),
+(16, 4, 25),
+(17, 2, 10),
+(18, 3, 35),
+(19, 4, 40),
+(20, 5, 15),
+(21, 6, 20),
+(22, 7, 18),
+(23, 8, 50),
+(24, 9, 22),
+(25, 10, 30),
+(26, 11, 45),
+(27, 12, 20),
+(28, 13, 30),
+(29, 14, 40),
+(30, 15, 15);
+
+
+
+----- Tabela Fornecedor 
+
+
+select * from FORNECEDOR
+select * from  produto 
+select * from PRODUTO_FORNECEDOR
+
+
+INSERT INTO fornecedor  VALUES 
+--('Fornecedora A', '12345678000190', '(11) 98765-4321'),
+('Fornecedora B', '23456789000112', '(21) 99876-5432'),
+('Fornecedora C', '34567890000123', '(31) 91234-5678'),
+('Fornecedora D', '45678901000134', '(41) 92345-6789'),
+('Fornecedora E', '56789012000145', '(51) 93456-7890'),
+('Fornecedora F', '67890123000156', '(61) 94567-8901'),
+('Fornecedora G', '78901234000167', '(71) 95678-9012'),
+('Fornecedora H', '89012345000178', '(81) 96789-0123'),
+('Fornecedora I', '90123456000189', '(91) 97890-1234'),
+('Fornecedora J', '01234567000190', '(95) 98901-2345'),
+('Fornecedora K', '23456789000101', '(92) 99012-3456'),
+('Fornecedora L', '34567890000112', '(85) 90123-4567'),
+('Fornecedora M', '45678901000123', '(79) 91234-5678'),
+('Fornecedora N', '56789012000134', '(83) 92345-6789'),
+('Fornecedora O', '67890123000145', '(98) 93456-7890');
+
+
+----- Tabela produto_fornecedor 
+
+select * from FORNECEDOR
+select * from  produto 
+select * from PRODUTO_FORNECEDOR
+
+INSERT INTO PRODUTO_FORNECEDOR  VALUES 
+ VALUES 
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(1, 2),
+(2, 3),
+(3, 4),
+(4, 5),
+(5, 6),
+(6, 7),
+(7, 8),
+(8, 9),
+(9, 10),
+(10, 11),
+(11, 12),
+(12, 13),
+(13, 14),
+(14, 15),
+(15, 1);
+
+------------------------------
+select * from cliente 
+select * from entrega
+select * from estoque 
+select * from fornecedor
+select * from pagamento
+select * from pedido
+select * from  produto 
+select * from produto_estoque
+select * from produto_fornecedor
+select * from produto_pedido
+select * from produto_vendedor 
+select * from produto_estoque 

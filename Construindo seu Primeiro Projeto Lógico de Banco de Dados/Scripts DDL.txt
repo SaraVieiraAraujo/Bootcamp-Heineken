@@ -1,0 +1,148 @@
+CREATE DATABASE  ECOMMERCE
+GO 
+
+
+Use ECOMMERCE 
+GO 
+
+ TABELA CLIENTE 
+Create table cliente (
+	Id Int Primary Key identity (1,1),
+	DataCadastro date , 
+	Sobrenome varchar(45), 
+	CPF char(11) not null , 
+	Endereco varchar(45), 
+	DataNascimento date,
+constraint unique_cpf_cliente unique(CPF)
+)
+select * from cliente
+
+GO 
+
+--- TABELA PEDIDO 
+Create table PEDIDO (
+	Id Int Primary Key identity (1,1),
+	IDcliente int,
+	Descricao varchar (255),
+	DataCadastro date , 
+	StatusPedido varchar(45),
+	Frete float default 10, 
+constraint fk_pedido_cliente foreign key (IDcliente) references cliente (Id) 
+)
+GO
+--- TABELA ENTREGA 
+Create table ENTREGA (
+	Id Int Primary Key identity (1,1),
+	IDPedido int,
+	StatusEntrega varchar(45),
+	DataCadastro date , 
+	CodigoRastreio int,
+constraint fk_entrega_pedido foreign key (IDPedido) references pedido(Id))
+GO 
+
+--- TABELA PAGAMENTO 
+Create table PAGAMENTO (
+	Id Int Primary Key identity (1,1),
+	IDPedido int,
+	FormaPagamento varchar (50),
+	StatusPagamento varchar(45),
+	Valor_total float,
+constraint fk_pagamento_pedido foreign key (IDPedido) references pedido(Id))
+
+GO
+
+--- TABELA PRODUTO 
+Create table PRODUTO (
+	Id Int Primary Key identity (1,1),
+	Nome VARCHAR(255),
+	Categoria varchar (45),
+	ValorUnitario float,
+)
+GO 
+--- TABELA ESTOQUE 
+Create table ESTOQUE (
+	Id Int Primary Key identity (1,1),
+	Local VARCHAR(45),
+	Quantidade int)
+
+Go 
+
+--- TABELA PRODUTO_ESTOQUE 
+Create table PRODUTO_ESTOQUE (
+	IdProduto Int,
+	IdEstoque Int,
+constraint pk_produto_estoque primary key (IdProduto,IdEstoque),
+constraint fk_produto_estoque_produto  foreign key (IdProduto) references produto (Id),
+constraint fk_produto_estoque_estoque  foreign key (IdEstoque) references estoque (Id)
+)
+
+
+--- TABELA FORNECEDOR 
+Create table FORNECEDOR (
+	Id Int Primary Key identity (1,1),
+	Nome VARCHAR(255),
+	CNPJ char (15) not null,
+	Contato varchar(45) not null
+constraint unique_cnpj_fornecedor unique(cnpj)
+)
+
+--- TABELA VENDEDOR  
+Create table VENDEDOR (
+	Id Int Primary Key identity (1,1),
+	RazãoSocial VARCHAR(45),
+	CNPJ char (15) not null,
+	Contato varchar(45) not null
+constraint unique_cnpj_VENDEDOR unique(cnpj)
+)
+GO 
+--- TABELA PRODUTO_VENDEDOR  
+Create table PRODUTO_VENDEDOR (
+	IdProduto Int ,
+	IdVendedor Int ,
+	Quantidade int,
+constraint pk_produto_vendedor primary key (IdProduto,IdVendedor),
+constraint fk_produto_produto_produto  foreign key (IdProduto) references produto (Id),
+constraint fk_produto_produto_vendedor  foreign key (IdVendedor) references vendedor (Id)
+)
+
+GO 
+EXEC sp_help 'dbo.PRODUTO_VENDEDOR';
+ 
+GO 
+--- TABELA PRODUTO_PEDIDO  
+Create table PRODUTO_PEDIDO (
+	IdProduto Int ,
+	IdPedido Int ,
+	Quantidade int,
+constraint pk_produto_pedido primary key (IdProduto,IdPedido),
+constraint fk_produto_prod foreign key (IdProduto) references produto (Id),
+constraint fk_produto_pedido  foreign key (IdPedido) references pedido (Id)
+)
+
+
+GO 
+--- TABELA PRODUTO_FORNECEDOR  
+Create table PRODUTO_FORNECEDOR  (
+	IdProduto Int ,
+	IdFornecedor Int ,
+constraint pk_produto_fornecedor  primary key (IdProduto,IdFornecedor),
+constraint fk_produto_prod_for foreign key (IdProduto) references produto (Id),
+constraint fk_produto_fornecedor  foreign key (IdFornecedor) references FORNECEDOR (Id)
+)
+
+
+
+
+
+select * from entrega
+select * from cliente
+select * from pedido 
+select * from pagamento 
+select * from produto
+select * from fornecedor  
+select * from estoque  
+select * from vendedor 
+select * from produto_vendedor
+select * from produto_estoque  
+select * from produto_fornecedor
+select * from produto_pedido
