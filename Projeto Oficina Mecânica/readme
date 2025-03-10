@@ -1,1 +1,45 @@
-#        📌Oficina Mecânica 
+# 👩‍💻 **Oficina Mecânica**!
+
+📝🤓Descrição do projeto. 
+
+Para este cenário você irá utilizar seu esquema conceitual, criado no desafio do módulo de modelagem de BD com modelo ER, para criar o esquema lógico para o contexto de uma oficina.
+Neste desafio, você definirá todas as etapas. Desde o esquema até a implementação do banco de dados.
+
+## 📌 MER-Oficina Mecânica 
+
+## 📌 Scripts DDL - Criação do Banco de dados Oficina Mecânica
+📝 Tabelas
+✅ cliente 
+✅MaoObra
+✅ Mecanico 
+✅ OrdemServico
+✅ OrdemServico_Servico
+✅ OrdemServico_Peca
+✅ Pagamento
+✅ Peca
+✅ Servico
+✅ Veiculo
+
+
+## 📌 Scripts DML - Inserir dados/informações nas tabelas 
+
+✅ Script DML -insert 
+
+## 📌 Scripts DQL - Extrair relatorios 
+
+
+✅select * from cliente 
+✅select * from MaoObra
+✅select * from Mecanico 
+✅select * from OrdemServico
+✅select * from OrdemServico_Servico
+✅select * from OrdemServico_Peca
+✅select * from Pagamento
+✅select * from Peca
+✅select * from Servico
+✅select * from Veiculo
+
+
+
+
+
