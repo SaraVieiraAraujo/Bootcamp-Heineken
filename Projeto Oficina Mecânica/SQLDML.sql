@@ -1,370 +1,324 @@
 
 
-
-
-
-
-
-select * from OrdemServico_Servico
-
-select * from Pagamento
-select * from OrdemServico
-
----- Tabela Cliente 
 select * from Cliente
-
-INSERT INTO cliente  VALUES
---('Carlos Souza', '12345678900', '11987654321', 'carlos@email.com', 'Rua das Oficinas, 123 - S„o Paulo, SP'),
-('Ana Oliveira', '98765432100', '11976543210', 'ana.oliveira@email.com', 'Avenida Central, 456 - Rio de Janeiro, RJ'),
-('Marcos Silva', '45678912300', '21987654321', 'marcos.silva@email.com', 'Rua do ComÈrcio, 789 - Belo Horizonte, MG'),
-('Fernanda Lima', '32165498700', '31965432198', 'fernanda.lima@email.com', 'PraÁa das ¡rvores, 101 - Curitiba, PR'),
-('Rafael Mendes', '65498732100', '11987456321', 'rafael.mendes@email.com', 'Rua Azul, 202 - Porto Alegre, RS'),
-('Juliana Costa', '78912365400', '21965412378', 'juliana.costa@email.com', 'Avenida Paulista, 303 - S„o Paulo, SP'),
-('Bruno Santos', '85296374100', '11987651234', 'bruno.santos@email.com', 'Rua Verde, 404 - Salvador, BA'),
-('PatrÌcia Almeida', '96385274100', '81976541236', 'patricia.almeida@email.com', 'Rua das Flores, 505 - Recife, PE'),
-('Rodrigo Ferreira', '74185296300', '21987456325', 'rodrigo.ferreira@email.com', 'Rua Amarela, 606 - BrasÌlia, DF'),
-('Larissa Martins', '14725836900', '11965231487', 'larissa.martins@email.com', 'Rua da Praia, 707 - FlorianÛpolis, SC'),
-('F·bio Rocha', '36985214700', '11987659874', 'fabio.rocha@email.com', 'Alameda dos Pinhais, 808 - Goi‚nia, GO'),
-('Camila Nunes', '25814736900', '21974125896', 'camila.nunes@email.com', 'Rua Principal, 909 - Fortaleza, CE'),
-('Daniel Correia', '98732165400', '11987451236', 'daniel.correia@email.com', 'Avenida Leste, 111 - BelÈm, PA'),
-('Tatiane Ribeiro', '75315948200', '31965412374', 'tatiane.ribeiro@email.com', 'Travessa Sul, 222 - Manaus, AM'),
-('Leonardo GonÁalves', '36974185200', '51987451236', 'leonardo.goncalves@email.com', 'Rua Oeste, 333 - Natal, RN'),
-('Roberta Souza', '95175385200', '21987412536', 'roberta.souza@email.com', 'Rua Norte, 444 - Jo„o Pessoa, PB'),
-('Guilherme Batista', '75348695100', '11987412598', 'guilherme.batista@email.com', 'Rua das Palmeiras, 555 - MaceiÛ, AL'),
-('Vanessa Teixeira', '15935785200', '31987412536', 'vanessa.teixeira@email.com', 'Rua da Lagoa, 666 - Teresina, PI'),
-('Ricardo Carvalho', '78965412300', '21987451298', 'ricardo.carvalho@email.com', 'Rua do Centro, 777 - S„o LuÌs, MA'),
-('Nat·lia Pires', '65432198700', '31987456321', 'natalia.pires@email.com', 'Rua da Universidade, 888 - Campo Grande, MS'),
-('Anderson Lopes', '85214796300', '11998765432', 'anderson.lopes@email.com', 'Rua das ¡rvores, 999 - VitÛria, ES'),
-('Elaine Farias', '32198765400', '21976543210', 'elaine.farias@email.com', 'Rua das Estrelas, 1000 - Cuiab·, MT'),
-('Thiago Morais', '78912345600', '31965432187', 'thiago.morais@email.com', 'Avenida dos Trabalhadores, 1100 - Porto Velho, RO'),
-('Aline Campos', '85296314700', '51987456321', 'aline.campos@email.com', 'Rua do Farol, 1200 - Boa Vista, RR')
-
-
----- Tabela Veiculo 
-select * from Veiculo
+INSERT INTO CLIENTE  VALUES
+--(1, 'Carlos Silva', '12345678901', '(11) 98765-4321', 'carlos.silva@email.com', 'Rua das Flores, 123 - S√£o Paulo, SP'),
+(2, 'Mariana Souza', '23456789012', '(11) 98654-3210', 'mariana.souza@email.com', 'Av. Paulista, 456 - S√£o Paulo, SP'),
+(3, 'Roberto Lima', '34567890123', '(21) 99876-5432', 'roberto.lima@email.com', 'Rua do Com√©rcio, 789 - Rio de Janeiro, RJ'),
+(4, 'Ana Pereira', '45678901234', '(31) 98765-6789', 'ana.pereira@email.com', 'Rua Minas Gerais, 101 - Belo Horizonte, MG'),
+(5, 'Fernanda Alves', '56789012345', '(41) 98432-1234', 'fernanda.alves@email.com', 'Av. Paran√°, 234 - Curitiba, PR'),
+(6, 'Ricardo Mendes', '67890123456', '(51) 99678-5678', 'ricardo.mendes@email.com', 'Rua da Praia, 345 - Porto Alegre, RS'),
+(7, 'Tatiane Rocha', '78901234567', '(61) 99876-4321', 'tatiane.rocha@email.com', 'Setor Sul, 567 - Bras√≠lia, DF'),
+(8, 'Jos√© Santos', '89012345678', '(71) 98765-8765', 'jose.santos@email.com', 'Rua da Bahia, 678 - Salvador, BA'),
+(9, 'Paula Nascimento', '90123456789', '(81) 99654-2345', 'paula.nascimento@email.com', 'Av. Recife, 789 - Recife, PE'),
+(10, 'Gustavo Ferreira', '01234567890', '(91) 99432-6789', 'gustavo.ferreira@email.com', 'Travessa Par√°, 890 - Bel√©m, PA'),
+(11, 'Camila Ramos', '11223344556', '(85) 98765-1234', 'camila.ramos@email.com', 'Rua Fortaleza, 1001 - Fortaleza, CE'),
+(12, 'Lucas Oliveira', '22334455667', '(95) 99876-5432', 'lucas.oliveira@email.com', 'Av. Roraima, 456 - Boa Vista, RR'),
+(13, 'Juliana Cardoso', '33445566778', '(92) 99678-8765', 'juliana.cardoso@email.com', 'Rua Amazonas, 567 - Manaus, AM'),
+(14, 'Eduardo Moreira', '44556677889', '(98) 98432-4321', 'eduardo.moreira@email.com', 'Rua Maranh√£o, 678 - S√£o Lu√≠s, MA'),
+(15, 'Patr√≠cia Lima', '55667788990', '(82) 99456-7890', 'patricia.lima@email.com', 'Av. Macei√≥, 789 - Macei√≥, AL'),
+(16, 'F√°bio Castro', '66778899001', '(96) 99543-2345', 'fabio.castro@email.com', 'Rua Macap√°, 890 - Macap√°, AP'),
+(17, 'Renata Teixeira', '77889900112', '(83) 99234-5678', 'renata.teixeira@email.com', 'Rua Para√≠ba, 901 - Jo√£o Pessoa, PB'),
+(18, 'Vin√≠cius Rocha', '88990011223', '(84) 99321-6789', 'vinicius.rocha@email.com', 'Rua Potiguar, 345 - Natal, RN'),
+(19, 'Let√≠cia Martins', '99001122334', '(86) 98712-3456', 'leticia.martins@email.com', 'Rua Teresina, 456 - Teresina, PI'),
+(20, 'Andr√© Gon√ßalves', '10111213141', '(88) 99123-4567', 'andre.goncalves@email.com', 'Av. Cear√°, 567 - Rio Branco, AC'),
+(21, 'Clara Menezes', '11121314151', '(89) 99345-6789', 'clara.menezes@email.com', 'Rua Piau√≠, 678 - Floriano, PI'),
+(22, 'Rodrigo Almeida', '12131415161', '(94) 99678-7890', 'rodrigo.almeida@email.com', 'Rua Tocantins, 789 - Palmas, TO'),
+(23, 'Bianca Souza', '13141516171', '(97) 99456-8901', 'bianca.souza@email.com', 'Av. Acre, 890 - Porto Velho, RO'),
+(24, 'C√©sar Costa', '14151617181', '(99) 99543-9012', 'cesar.costa@email.com', 'Rua Rond√¥nia, 901 - Ji-Paran√°, RO'),
+(25, 'Vanessa Lopes', '15161718191', '(67) 99876-4321', 'vanessa.lopes@email.com', 'Rua Mato Grosso, 102 - Campo Grande, MS');
 
 
-INSERT INTO veiculo  VALUES
----(1, 'ABC1D23', 'Civic', 'Honda', 2020),
-(2, 'XYZ2E34', 'Corolla', 'Toyota', 2019),
-(3, 'JKL3F45', 'Onix', 'Chevrolet', 2021),
-(4, 'MNO4G56', 'Gol', 'Volkswagen', 2018),
-(5, 'PQR5H67', 'HB20', 'Hyundai', 2022),
-(6, 'STU6I78', 'Compass', 'Jeep', 2021),
-(7, 'VWX7J89', 'Ranger', 'Ford', 2020),
-(8, 'YZA8K90', 'Argo', 'Fiat', 2019),
-(9, 'BCD9L01', 'Duster', 'Renault', 2018),
-(10, 'EFG0M12', 'HR-V', 'Honda', 2022),
-(11, 'HIJ1N23', 'Cruze', 'Chevrolet', 2021),
-(12, 'KLM2O34', 'Polo', 'Volkswagen', 2020),
-(13, 'NOP3P45', 'Tucson', 'Hyundai', 2019),
-(14, 'QRS4Q56', 'Toro', 'Fiat', 2018),
-(15, 'TUV5R67', 'Ecosport', 'Ford', 2021),
-(16, 'WXY6S78', 'Renegade', 'Jeep', 2020),
-(17, 'ZAB7T89', 'Fiesta', 'Ford', 2019),
-(18, 'CDE8U90', 'Strada', 'Fiat', 2022),
-(19, 'FGH9V01', 'Kwid', 'Renault', 2021),
-(20, 'IJK0W12', 'C4 Cactus', 'CitroÎn', 2019),
-(21, 'LMN1X23', 'T-Cross', 'Volkswagen', 2020),
-(22, 'OPQ2Y34', 'S10', 'Chevrolet', 2018),
-(23, 'RST3Z45', 'Fit', 'Honda', 2021),
-(24, 'UVW4A56', 'Hilux', 'Toyota', 2020)
-
----- Tabela MaoObra 
+select * from Veiculo V
+JOIN CLIENTE C ON V.id_veiculo =C.id_cliente 
+INSERT INTO VEICULO  VALUES
+(1, 1, 'ABC1D23', 'Corolla', 'Toyota', 2020),
+(2, 2, 'DEF2E34', 'Civic', 'Honda', 2019),
+(3, 3, 'GHI3F45', 'Onix', 'Chevrolet', 2021),
+(4, 4, 'JKL4G56', 'HB20', 'Hyundai', 2018),
+(5, 5, 'MNO5H67', 'Compass', 'Jeep', 2022),
+(6, 6, 'PQR6I78', 'Toro', 'Fiat', 2021),
+(7, 7, 'STU7J89', 'Hilux', 'Toyota', 2020),
+(8, 8, 'VWX8K90', 'Kwid', 'Renault', 2019),
+(9, 9, 'YZA9L01', 'Fiesta', 'Ford', 2017),
+(10, 10, 'BCD0M12', 'S10', 'Chevrolet', 2022),
+(11, 11, 'EFG1N23', 'Golf', 'Volkswagen', 2018),
+(12, 12, 'HIJ2O34', 'Ecosport', 'Ford', 2019),
+(13, 13, 'KLM3P45', 'Strada', 'Fiat', 2021),
+(14, 14, 'NOP4Q56', 'Ranger', 'Ford', 2020),
+(15, 15, 'QRS5R67', 'Celta', 'Chevrolet', 2015),
+(16, 16, 'TUV6S78', 'Polo', 'Volkswagen', 2022),
+(17, 17, 'WXY7T89', 'HR-V', 'Honda', 2020),
+(18, 18, 'ZAB8U90', 'Argo', 'Fiat', 2021),
+(19, 19, 'CDE9V01', 'Spin', 'Chevrolet', 2019),
+(20, 20, 'FGH0W12', 'Yaris', 'Toyota', 2022),
+(21, 21, 'IJK1X23', 'Virtus', 'Volkswagen', 2020),
+(22, 22, 'LMN2Y34', 'Cronos', 'Fiat', 2019),
+(23, 23, 'OPQ3Z45', 'T-Cross', 'Volkswagen', 2021),
+(24, 24, 'RST4A56', 'Duster', 'Renault', 2018),
+(25, 25, 'UVW5B67', 'Corolla Cross', 'Toyota', 2023);
 
 select * from MaoObra
 
-
 INSERT INTO MaoObra  VALUES
-('Troca de Ûleo e filtro', 120.00),
-('Alinhamento e balanceamento', 150.00),
-('Revis„o geral', 300.00),
-('Troca de pastilhas de freio', 200.00),
-('Troca de amortecedores', 400.00),
-('Troca de correia dentada', 350.00),
-('Troca de embreagem', 600.00),
-('Recarga de ar-condicionado', 180.00),
-('Troca de bateria', 100.00),
-('DiagnÛstico eletrÙnico', 90.00),
-('Troca de velas de igniÁ„o', 150.00),
-('ServiÁo de funilaria e pintura', 800.00),
-('Limpeza de bicos injetores', 250.00),
-('Troca de filtro de ar e combustÌvel', 130.00),
-('Reparo no sistema de suspens„o', 500.00),
-('Reparo no sistema de direÁ„o hidr·ulica', 550.00),
-('Troca do fluido de freio', 140.00),
-('ManutenÁ„o do sistema de arrefecimento', 220.00),
-('Reparo no motor', 1000.00),
-('Troca de pneus', 80.00),
-('InstalaÁ„o de som automotivo', 250.00),
-('Polimento e cristalizaÁ„o de pintura', 350.00),
-('InspeÁ„o e regulagem do motor', 280.00),
-('Reparo elÈtrico', 200.00),
-('SubstituiÁ„o de escapamento', 320.00);
+(1, 'Troca de √≥leo', 100.00),
+(2, 'Alinhamento e balanceamento', 150.00),
+(3, 'Revis√£o geral', 300.00),
+(4, 'Troca de pastilhas de freio', 200.00),
+(5, 'Troca de embreagem', 600.00),
+(6, 'Limpeza de bicos injetores', 180.00),
+(7, 'Troca de filtro de ar', 90.00),
+(8, 'Troca de velas de igni√ß√£o', 120.00),
+(9, 'Troca de amortecedores', 450.00),
+(10, 'Recarga de ar-condicionado', 250.00),
+(11, 'Troca de correia dentada', 500.00),
+(12, 'Diagn√≥stico eletr√¥nico', 200.00),
+(13, 'Troca de bomba de combust√≠vel', 400.00),
+(14, 'Troca de radiador', 350.00),
+(15, 'Troca de bateria', 220.00),
+(16, 'Pintura de para-choque', 500.00),
+(17, 'Troca de rolamentos', 270.00),
+(18, 'Reparo no sistema de suspens√£o', 550.00),
+(19, 'Troca de disco de freio', 320.00),
+(20, 'Troca de √≥leo do c√¢mbio autom√°tico', 600.00),
+(21, 'Reparo no sistema el√©trico', 400.00),
+(22, 'Troca de junta do cabe√ßote', 700.00),
+(23, 'Reparo no sistema de dire√ß√£o hidr√°ulica', 650.00),
+(24, 'Reparo no escapamento', 180.00),
+(25, 'Troca de vidro el√©trico', 300.00);
 
-
-
----- Tabela Peca 
 
 select * from Peca
+INSERT INTO Peca  VALUES
+(1, 'Filtro de √≥leo', 35.00, 50),
+(2, 'Filtro de ar', 45.00, 40),
+(3, '√ìleo do motor 5W30', 90.00, 30),
+(4, 'Pastilhas de freio dianteiras', 150.00, 20),
+(5, 'Amortecedor dianteiro', 400.00, 15),
+(6, 'Correia dentada', 120.00, 25),
+(7, 'Embreagem completa', 850.00, 10),
+(8, 'Bateria 60Ah', 450.00, 12),
+(9, 'Velas de igni√ß√£o (jogo)', 100.00, 30),
+(10, 'Radiador', 600.00, 8),
+(11, 'Bomba de combust√≠vel', 380.00, 18),
+(12, 'Disco de freio', 220.00, 25),
+(13, 'Kit de embreagem', 950.00, 7),
+(14, 'Sensor de temperatura', 75.00, 35),
+(15, 'Rolamento de roda', 180.00, 20),
+(16, 'Fluido de freio DOT4', 50.00, 40),
+(17, 'Pneus 195/60 R15', 480.00, 16),
+(18, 'Escapamento esportivo', 650.00, 5),
+(19, 'Alternador', 780.00, 9),
+(20, 'Motor de arranque', 900.00, 6),
+(21, 'Parafuso de roda', 15.00, 100),
+(22, 'Junta do cabe√ßote', 250.00, 12),
+(23, 'Sensor de oxig√™nio', 200.00, 20),
+(24, 'Catalisador', 1,200.00, 4),
+(25, 'Lanterna traseira', 320.00, 15);
 
-
-INSERT INTO peca  VALUES
-('Filtro de Ûleo', 35.00, 50),
-('Filtro de ar', 45.00, 40),
-('Filtro de combustÌvel', 50.00, 30),
-('”leo do motor 5W30 1L', 55.00, 60),
-('”leo do motor 10W40 1L', 50.00, 50),
-('Pastilha de freio dianteira', 120.00, 25),
-('Pastilha de freio traseira', 110.00, 20),
-('Disco de freio dianteiro', 250.00, 15),
-('Disco de freio traseiro', 230.00, 15),
-('Correia dentada', 180.00, 30),
-('Correia do alternador', 90.00, 40),
-('Amortecedor dianteiro', 320.00, 20),
-('Amortecedor traseiro', 300.00, 20),
-('Bateria 60Ah', 450.00, 10),
-('Bateria 70Ah', 500.00, 10),
-('Velas de igniÁ„o (jogo)', 160.00, 25),
-('Bomba de combustÌvel', 380.00, 15),
-('Sensor de oxigÍnio', 220.00, 18),
-('Radiador', 600.00, 10),
-('Termostato', 90.00, 25),
-('Junta do cabeÁote', 250.00, 12),
-('Bobina de igniÁ„o', 210.00, 18),
-('Cabo de vela', 130.00, 30),
-('Embreagem (kit)', 850.00, 8),
-('Coxim do motor', 180.00, 20);
-
-
-
----- Tabela Mecanico 
 
 select * from Mecanico
 
+INSERT INTO Mecanico  VALUES
+(1, 'Carlos Silva', 'Suspens√£o e freios', '(11) 98765-4321'),
+(2, 'Ricardo Souza', 'Motor e c√¢mbio', '(21) 97654-3210'),
+(3, 'Fernando Lima', 'Inje√ß√£o eletr√¥nica', '(31) 96543-2109'),
+(4, 'Andr√© Martins', 'El√©trica automotiva', '(41) 95432-1098'),
+(5, 'Roberto Almeida', 'Pintura e funilaria', '(51) 94321-0987'),
+(6, 'Marcos Ribeiro', 'Troca de √≥leo e filtros', '(61) 93210-9876'),
+(7, 'Jos√© Pereira', 'Suspens√£o e alinhamento', '(71) 92109-8765'),
+(8, 'Daniel Costa', 'C√¢mbio autom√°tico', '(81) 91098-7654'),
+(9, 'Luiz Henrique', 'Sistema de arrefecimento', '(91) 90987-6543'),
+(10, 'F√°bio Santos', 'Diagn√≥stico eletr√¥nico', '(95) 89876-5432'
 
-INSERT INTO mecanico  VALUES
-('Carlos Andrade', 'Suspens„o e Freios', '11987654321'),
-('Roberto Lima', 'Motor e InjeÁ„o EletrÙnica', '11976543210'),
-('AndrÈ Santos', 'Transmiss„o e Embreagem', '11965432198'),
-('Fernando Souza', 'Ar-condicionado Automotivo', '21987654321'),
-('Paulo Henrique', 'Alinhamento e Balanceamento', '31965412378'),
-('Marcos Oliveira', 'ElÈtrica Automotiva', '11987456321'),
-('JosÈ Ricardo', 'Funilaria e Pintura', '21965412345'),
-('Rafael Mendes', 'Escapamento e Catalisador', '11987651234'),
-('Daniel Ferreira', 'DiagnÛstico Computadorizado', '21987456325'),
-('Thiago Almeida', 'Revis„o e ManutenÁ„o Preventiva', '31987412598'),
-('Rodrigo Nunes', 'Freios ABS e Hidr·ulicos', '11987451236'),
-('Juliano Batista', 'Motores Turbo e PreparaÁ„o', '21987412536'),
-('Victor Cardoso', 'InstalaÁ„o de Som e AcessÛrios', '31987456321'),
-('Bruno Rocha', 'Troca de ”leo e Filtros', '51987451236'),
-('Gabriel Teixeira', 'Baterias e Alternadores', '21987451298'),
-('Leonardo Carvalho', 'Radiadores e Arrefecimento', '31987456321'),
-('Hugo Martins', 'Reparo de DireÁ„o Hidr·ulica', '21987412365'),
-('Gustavo Ramos', 'Caixa de C‚mbio Autom·tica', '11998765432'),
-('VinÌcius Silva', 'Sistema de IgniÁ„o', '21976543210'),
-('Pedro Costa', 'Troca de Pneus e Rodas', '31965432187'),
-('Aline Souza', 'ManutenÁ„o de Carros ElÈtricos', '11987451298'),
-('Vanessa Lima', 'HÌbridos e Tecnologias Sustent·veis', '31987451236'),
-('PatrÌcia Ribeiro', 'Testes de Emiss„o e InspeÁ„o Veicular', '51987456321'),
-('F·bio Correia', 'Montagem e Reparo de Motores', '21987456325'),
-('Diego Lopes', 'Reparo de Sistemas Diesel', '11987412365');
+select * from Mecanico m  join  OrdemServico os 
+on os.id_os=m.id_mecanico
+select * from Mecanico 1-10
+select * from Veiculo 1-25 
 
----- Tabela Servico 
-select * from Servico
+select count (id_os) as OorderServico , os.id_mecanico , m.nome  
+	from OrdemServico os
+	join Mecanico m on os.id_mecanico=m.id_mecanico 
+group by os.id_mecanico , m.nome
+order by 1 desc
 
-INSERT INTO servico  VALUES
-('Troca de Ûleo e filtro', 120.00, 'ManutenÁ„o Preventiva'),
-('Alinhamento e balanceamento', 150.00, 'ManutenÁ„o Preventiva'),
-('Revis„o geral', 300.00, 'ManutenÁ„o Completa'),
-('Troca de pastilhas de freio', 200.00, 'Freios'),
-('Troca de amortecedores', 400.00, 'Suspens„o'),
-('Troca de correia dentada', 350.00, 'Motor'),
-('Troca de embreagem', 600.00, 'Transmiss„o'),
-('Recarga de ar-condicionado', 180.00, 'ClimatizaÁ„o'),
-('Troca de bateria', 100.00, 'ElÈtrica'),
-('DiagnÛstico eletrÙnico', 90.00, 'DiagnÛstico'),
-('Troca de velas de igniÁ„o', 150.00, 'IgniÁ„o'),
-('ServiÁo de funilaria e pintura', 800.00, 'EstÈtica Veicular'),
-('Limpeza de bicos injetores', 250.00, 'InjeÁ„o EletrÙnica'),
-('Troca de filtro de ar e combustÌvel', 130.00, 'ManutenÁ„o Preventiva'),
-('Reparo no sistema de suspens„o', 500.00, 'Suspens„o'),
-('Reparo no sistema de direÁ„o hidr·ulica', 550.00, 'DireÁ„o'),
-('Troca do fluido de freio', 140.00, 'Freios'),
-('ManutenÁ„o do sistema de arrefecimento', 220.00, 'Arrefecimento'),
-('Reparo no motor', 1000.00, 'Motor'),
-('Troca de pneus', 80.00, 'Pneus e Rodas'),
-('InstalaÁ„o de som automotivo', 250.00, 'AcessÛrios'),
-('Polimento e cristalizaÁ„o de pintura', 350.00, 'EstÈtica Veicular'),
-('InspeÁ„o e regulagem do motor', 280.00, 'Motor'),
-('Reparo elÈtrico', 200.00, 'ElÈtrica'),
-('SubstituiÁ„o de escapamento', 320.00, 'Escapamento');
+select * from OrdemServico where id_mecanico =1
+
+INSERT INTO OrdemServico  VALUES
+(1, 1, 3, 'Troca de √≥leo e filtro', '2024-03-01', 'Conclu√≠do', 150.00),
+(2, 2, 7, 'Alinhamento e balanceamento', '2024-03-02', 'Em andamento', 180.00),
+(3, 3, 1, 'Revis√£o geral', '2024-03-03', 'Aguardando Pe√ßas', 500.00),
+(4, 4, 5, 'Troca de pastilhas de freio', '2024-03-04', 'Conclu√≠do', 250.00),
+(5, 5, 2, 'Troca de embreagem', '2024-03-05', 'Em andamento', 900.00),
+(6, 6, 8, 'Limpeza de bicos injetores', '2024-03-06', 'Pendente', 220.00),
+(7, 7, 9, 'Troca de amortecedores', '2024-03-07', 'Conclu√≠do', 600.00),
+(8, 8, 4, 'Troca de correia dentada', '2024-03-08', 'Aguardando Pe√ßas', 700.00),
+(9, 9, 6, 'Recarga de ar-condicionado', '2024-03-09', 'Conclu√≠do', 320.00),
+(10, 10, 10, 'Diagn√≥stico eletr√¥nico', '2024-03-10', 'Em andamento', 180.00),
+(11, 11, 10, 'Troca de bateria', '2024-03-11', 'Conclu√≠do', 280.00),
+(12, 12, 1, 'Reparo no sistema el√©trico', '2024-03-12', 'Pendente', 450.00),
+(14, 14, 2, 'Reparo na dire√ß√£o hidr√°ulica', '2025-03-01', 'Em andamento', 550.00),
+(15, 15, 1, 'Troca de escapamento', '2025-02-02', 'Conclu√≠do', 350.00),
+(16, 16, 4, 'Substitui√ß√£o de sensor ABS', '2024-01-12', 'Aguardando Pe√ßas', 400.00),
+(17, 17, 4, 'Revis√£o de 40.000 km', '2024-02-12', 'Pendente', 1200.00),
+(18, 18, 5, 'Troca de discos de freio', '2024-18-02', 'Conclu√≠do', 450.00),
+(19, 19, 5, 'Troca de √≥leo do c√¢mbio autom√°tico', '2024-03-12', 'Em andamento', 750.00),
+(20, 20, 6, 'Reparo no sistema de arrefecimento', '2024-20-12', 'Pendente', 620.00),
+(21, 21, 6, 'Troca de vidro el√©trico', '2024-21-12', 'Conclu√≠do', 290.00),
+(22, 22, 7, 'Troca de rolamentos de roda', '2024-12-12', 'Em andamento', 500.00),
+(23, 23, 7, 'Troca de pneus', '2024-03-05', 'Conclu√≠do', 1600.00),
+(24, 24, 10, 'Reparo na lataria', '2024-18-05', 'Aguardando Pe√ßas', 950.00),
+(25, 25, 10, 'Instala√ß√£o de alarme automotivo', '2024-03-03', 'Pendente', 350.00);
 
 
----- Tabela Pagamento 
-select * from Veiculo
-select * from OrdemServico
-select * from mecanico 
-
-INSERT INTO ordemservico  VALUES
-
-INSERT INTO ordem_servico (idveiculo, idmecanico, descricao, data_abertura, status_os, total) VALUES
-(1, 2, 'Troca de Ûleo e filtro', '2024-03-01', 'Aberta', 120.00),
-(2, 4, 'Alinhamento e balanceamento', '2024-03-02', 'Finalizada', 150.00),
-(3, 6, 'Revis„o geral', '2024-03-03', 'Em andamento', 300.00),
-(4, 8, 'Troca de pastilhas de freio', '2024-03-04', 'Aberta', 200.00),
-(5, 10, 'Troca de amortecedores', '2024-03-05', 'Finalizada', 400.00),
-(6, 1, 'Troca de correia dentada', '2024-03-06', 'Aberta', 350.00),
-(7, 3, 'Troca de embreagem', '2024-03-07', 'Em andamento', 600.00),
-(8, 5, 'Recarga de ar-condicionado', '2024-03-08', 'Finalizada', 180.00),
-(9, 7, 'Troca de bateria', '2024-03-09', 'Aberta', 100.00),
-(10, 9, 'DiagnÛstico eletrÙnico', '2024-03-10', 'Em andamento', 90.00),
-(11, 11, 'Troca de velas de igniÁ„o', '2024-03-11', 'Finalizada', 150.00),
-(12, 13, 'ServiÁo de funilaria e pintura', '2024-03-12', 'Aberta', 800.00),
-(13, 15, 'Limpeza de bicos injetores', '2024-03-13', 'Em andamento', 250.00),
-(14, 17, 'Troca de filtro de ar e combustÌvel', '2024-03-14', 'Finalizada', 130.00),
-(15, 19, 'Reparo no sistema de suspens„o', '2024-03-15', 'Aberta', 500.00),
-(16, 20, 'Reparo no sistema de direÁ„o hidr·ulica', '2024-03-16', 'Em andamento', 550.00),
-(17, 22, 'Troca do fluido de freio', '2024-03-17', 'Finalizada', 140.00),
-(18, 24, 'ManutenÁ„o do sistema de arrefecimento', '2024-03-18', 'Aberta', 220.00),
-(19, 25, 'Reparo no motor', '2024-03-19', 'Finalizada', 1000.00),
-(20, 21, 'Troca de pneus', '2024-03-20', 'Em andamento', 80.00),
-(21, 23, 'InstalaÁ„o de som automotivo', '2024-03-21', 'Aberta', 250.00),
-(22, 14, 'Polimento e cristalizaÁ„o de pintura', '2024-03-22', 'Finalizada', 350.00),
-(23, 12, 'InspeÁ„o e regulagem do motor', '2024-03-23', 'Aberta', 280.00),
-(24, 18, 'Reparo elÈtrico', '2024-03-24', 'Em andamento', 200.00),
-(25, 16, 'SubstituiÁ„o de escapamento', '2024-03-25', 'Finalizada', 320.00);
-
-
-
-select * from Cliente ok 
-select * from Veiculo ok 
-select * from MaoObra ok 
-select * from Peca ok 
-select * from Mecanico ok 
-select * from Servico ok 
-
-select * from OrdemServico_Peca
-INSERT INTO ordemservico  VALUES
-(1, 3, 'Troca de Ûleo e filtro', '2024-03-01', 'Aberta', 120.00),
-(2, 5, 'Alinhamento e balanceamento', '2024-03-02', 'Finalizada', 150.00),
-(3, 7, 'Revis„o geral', '2024-03-03', 'Em andamento', 300.00),
-(4, 2, 'Troca de pastilhas de freio', '2024-03-04', 'Aberta', 200.00),
-(5, 4, 'Troca de amortecedores', '2024-03-05', 'Finalizada', 400.00),
-(6, 6, 'Troca de correia dentada', '2024-03-06', 'Aberta', 350.00),
-(7, 8, 'Troca de embreagem', '2024-03-07', 'Em andamento', 600.00),
-(8, 10, 'Recarga de ar-condicionado', '2024-03-08', 'Finalizada', 180.00),
-(9, 1, 'Troca de bateria', '2024-03-09', 'Aberta', 100.00),
-(10, 12, 'DiagnÛstico eletrÙnico', '2024-03-10', 'Em andamento', 90.00),
-(11, 14, 'Troca de velas de igniÁ„o', '2024-03-11', 'Finalizada', 150.00),
-(12, 16, 'ServiÁo de funilaria e pintura', '2024-03-12', 'Aberta', 800.00),
-(13, 18, 'Limpeza de bicos injetores', '2024-03-13', 'Em andamento', 250.00),
-(14, 20, 'Troca de filtro de ar e combustÌvel', '2024-03-14', 'Finalizada', 130.00),
-(15, 22, 'Reparo no sistema de suspens„o', '2024-03-15', 'Aberta', 500.00),
-(16, 24, 'Reparo no sistema de direÁ„o hidr·ulica', '2024-03-16', 'Em andamento', 550.00),
-(17, 9, 'Troca do fluido de freio', '2024-03-17', 'Finalizada', 140.00),
-(18, 11, 'ManutenÁ„o do sistema de arrefecimento', '2024-03-18', 'Aberta', 220.00),
-(19, 13, 'Reparo no motor', '2024-03-19', 'Finalizada', 1000.00),
-(20, 15, 'Troca de pneus', '2024-03-20', 'Em andamento', 80.00),
-(21, 17, 'InstalaÁ„o de som automotivo', '2024-03-21', 'Aberta', 250.00),
-(22, 19, 'Polimento e cristalizaÁ„o de pintura', '2024-03-22', 'Finalizada', 350.00),
-(23, 21, 'InspeÁ„o e regulagem do motor', '2024-03-23', 'Aberta', 280.00),
-(24, 23, 'Reparo elÈtrico', '2024-03-24', 'Em andamento', 200.00),
-(25, 25, 'SubstituiÁ„o de escapamento', '2024-03-25', 'Finalizada', 320.00);
-
-select * from OrdemServico 
-select * from Servico
-select * from OrdemServico_Servico 
-insert into OrdemServico_Servico values 
-(1 ,1),
-(26,2),
-(27,3),
-(28,4),
-(29,5),
-(30,6),
-(31,7),
-(38,8),
-(39,9),
-(40,10),
-(41,11),
-(42,12),
-(50,13),
-(51,14),
-(58,15),
-(59,16),
-(60,17),
-(61,18),
-(62,19),
-(63,20),
-(64,21),
-(65,22),
-(66,23),
-(67,24),
-(77,25),
-(78,1),
-(87,2),
-(88,3),
-(89,4),
-(90,5),
-(91,6),
-(92,7),
-(96,8),
-(97,9);
-select * from pagamento
-select * from OrdemServico
-INSERT INTO pagamento  VALUES
-(1,'2024-01-01', 'Cart„o de CrÈdito', 120.00, 'Pago'),
-(26,'2024-02-02', 'Boleto Banc·rio', 150.00, 'Pendente'),
-(27,'2024-03-03', 'Pix', 300.00, 'Pago'),
-(28,'2024-02-04', 'Dinheiro', 200.00, 'Pago'),
-(29,'2024-02-05', 'Cart„o de DÈbito', 400.00, 'Pago'),
-(30,'2024-06-06', 'Boleto Banc·rio', 350.00, 'Pendente'),
-(31,'2024-07-07', 'Cart„o de CrÈdito', 600.00, 'Pago'),
-(38,'2024-08-08', 'Pix', 180.00, 'Pago'),
-(39,'2024-09-09', 'Dinheiro', 100.00, 'Pago'),
-(40,'2024-10-10', 'Cart„o de DÈbito', 90.00, 'Pago'),
-(41,'2024-03-11', 'Boleto Banc·rio', 150.00, 'Pendente'),
-(42,'2024-03-12', 'Pix', 800.00, 'Pago'),
-(50,'2024-01-04', 'Cart„o de CrÈdito', 250.00, 'Pago'),
-(51,'2025-03-01', 'Dinheiro', 130.00, 'Pago'),
-(58,'2024-02-03', 'Cart„o de DÈbito', 500.00, 'Pago'),
-(59,'2024-03-03', 'Boleto Banc·rio', 550.00, 'Pendente'),
-(60,'2024-04-03', 'Pix', 140.00, 'Pago'),
-(61,'2024-05-03', 'Dinheiro', 220.00, 'Pago'),
-(62,'2024-06-03', 'Cart„o de CrÈdito', 1000.00, 'Pago'),
-(63,'2024-07-03', 'Boleto Banc·rio', 80.00, 'Pendente'),
-(64,'2024-08-03', 'Pix', 250.00, 'Pago'),
-(65,'2024-08-03', 'Cart„o de DÈbito', 350.00, 'Pago'),
-(66,'2024-09-03', 'Dinheiro', 280.00, 'Pago'),
-(67,'2024-10-03', 'Boleto Banc·rio', 200.00, 'Pendente'),
-(77,'2024-11-03', 'Pix', 320.00, 'Pago'),
-(78,'2024-12-03', 'Boleto Banc·rio', 150.00, 'Pendente'),
-(87,'2025-01-01', 'Pix', 300.00, 'Pago'),
-(88,'2024-03-04', 'Dinheiro', 200.00, 'Pago'),
-(89,'2024-03-05', 'Cart„o de DÈbito', 400.00, 'Pago'),
-(90,'2024-03-06', 'Boleto Banc·rio', 350.00, 'Pendente'),
-(91,'2024-03-07', 'Cart„o de CrÈdito', 600.00, 'Pago'),
-(92,'2024-03-08', 'Pix', 180.00, 'Pago'),
-(96,'2024-03-09', 'Dinheiro', 100.00, 'Pago'),
-(97,'2024-03-10', 'Cart„o de DÈbito', 90.00, 'Pago'),
-(98,'2024-03-11', 'Boleto Banc·rio', 150.00, 'Pendente');
+INSERT INTO OrdemServico_Peca (ID_OS, ID_Pecas) VALUES
+(1, 1),
+(1, 3),
+(2, 2),
+(2, 4),
+(3, 5),
+(3, 6),
+(4, 7),
+(4, 8),
+(5, 9),
+(5, 10),
+(6, 11),
+(6, 12),
+(7, 13),
+(7, 14),
+(8, 15),
+(8, 16),
+(9, 17),
+(9, 18),
+(10, 19),
+(10, 20),
+(11, 21),
+(11, 22),
+(12, 23),
+(12, 24),
+(13, 25),
+(14, 1),
+(15, 3),
+(16, 5),
+(17, 7),
+(18, 9),
+(19, 11),
+(20, 13),
+(21, 15),
+(22, 17),
+(23, 19),
+(24, 21),
+(25, 23);
 
 
-select * from cliente 
-select * from MaoObra
-select * from Mecanico 
-select * from OrdemServico
+select os.id_os as OS , os.Descricao,os.dataabertura , os.statusos , p.descricao as Pe√ßas , p.preco as Pre√ßo
+       from OrdemServico_Peca op
+	join OrdemServico os on op.id_os =os.id_os 
+	join Peca p on op.id_peca =p.id_peca
+	
+
+
+INSERT INTO Servico  VALUES
+(1, 'Troca de √≥leo e filtro', 150.00, 'Manuten√ß√£o'),
+(2, 'Alinhamento e balanceamento de rodas', 180.00, 'Manuten√ß√£o'),
+(3, 'Revis√£o geral do ve√≠culo', 500.00, 'Revis√£o'),
+(4, 'Troca de pastilhas de freio', 250.00, 'Reparo'),
+(5, 'Troca de embreagem', 900.00, 'Reparo'),
+(6, 'Limpeza de bicos injetores', 220.00, 'Manuten√ß√£o'),
+(7, 'Troca de amortecedores', 600.00, 'Reparo'),
+(8, 'Troca de correia dentada', 700.00, 'Reparo'),
+(9, 'Recarga de ar-condicionado', 320.00, 'Manuten√ß√£o'),
+(10, 'Diagn√≥stico eletr√¥nico', 180.00, 'Diagn√≥stico'),
+(11, 'Troca de bateria', 280.00, 'Reparo'),
+(12, 'Reparo no sistema el√©trico', 450.00, 'Reparo'),
+(13, 'Troca de junta do cabe√ßote', 800.00, 'Reparo'),
+(14, 'Reparo na dire√ß√£o hidr√°ulica', 550.00, 'Reparo'),
+(15, 'Troca de escapamento', 350.00, 'Reparo'),
+(16, 'Substitui√ß√£o de sensor ABS', 400.00, 'Manuten√ß√£o'),
+(17, 'Revis√£o de 40.000 km', 1200.00, 'Revis√£o'),
+(18, 'Troca de discos de freio', 450.00, 'Reparo'),
+(19, 'Troca de √≥leo do c√¢mbio autom√°tico', 750.00, 'Manuten√ß√£o'),
+(20, 'Reparo no sistema de arrefecimento', 620.00, 'Reparo'),
+(21, 'Troca de vidro el√©trico', 290.00, 'Reparo'),
+(22, 'Troca de rolamentos de roda', 500.00, 'Reparo'),
+(23, 'Troca de pneus', 1600.00, 'Reparo'),
+(24, 'Reparo na lataria', 950.00, 'Reparo'),
+(25, 'Instala√ß√£o de alarme automotivo', 350.00, 'Instala√ß√£o');
+
+
 select * from OrdemServico_Servico
-select * from OrdemServico_Peca
-select * from Pagamento
-select * from Peca
+
+INSERT INTO OrdemServico_Servico (ID_OS, ID_Servico) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(3, 5),
+(3, 6),
+(4, 7),
+(4, 8),
+(5, 9),
+(5, 10),
+(6, 11),
+(6, 12),
+(7, 13),
+(7, 14),
+(8, 15),
+(8, 16),
+(9, 17),
+(9, 18),
+(10, 19),
+(10, 20),
+(11, 21),
+(11, 22),
+(12, 23),
+(12, 24),
+--(13, 25),
+(14, 1),
+(15, 2),
+(16, 3),
+(17, 4),
+(18, 5),
+(19, 6),
+(20, 7),
+(21, 8),
+(22, 9),
+(23, 10),
+(24, 11),
+(25, 12);
+
 select * from Servico
-select * from Veiculo
 
 
-exec sp_help 'OrdemServico'
+select * from Pagamento
 
 
+INSERT INTO Pagamento  VALUES
+(1, 1, '2024-03-01', 'Cart√£o de Cr√©dito', 150.00, 'Pago'),
+(2, 2, '2024-03-02', 'Dinheiro', 180.00, 'Pago'),
+(3, 3, '2024-03-03', 'Pix', 500.00, 'Pago'),
+(4, 4, '2024-03-04', 'Cart√£o de Cr√©dito', 250.00, 'Pago'),
+(5, 5, '2024-03-05', 'Dinheiro', 900.00, 'Pago'),
+(6, 6, '2024-03-06', 'Pix', 220.00, 'Pendente'),
+(7, 7, '2024-03-07', 'Cart√£o de Cr√©dito', 600.00, 'Pago'),
+(8, 8, '2024-03-08', 'Dinheiro', 700.00, 'Pendente'),
+(9, 9, '2024-03-09', 'Pix', 320.00, 'Pago'),
+(10, 10, '2024-03-10', 'Cart√£o de Cr√©dito', 180.00, 'Pago'),
+(11, 11, '2024-03-11', 'Dinheiro', 280.00, 'Pago'),
+(12, 12, '2024-03-12', 'Pix', 450.00, 'Pendente'),
+(13, 13, '2024-03-13', 'Cart√£o de Cr√©dito', 800.00, 'Pago'),
+(14, 14, '2024-03-14', 'Dinheiro', 550.00, 'Pendente'),
+(15, 15, '2024-03-15', 'Pix', 350.00, 'Pago'),
+(16, 16, '2024-03-16', 'Cart√£o de Cr√©dito', 400.00, 'Pendente'),
+(17, 17, '2024-03-17', 'Dinheiro', 1200.00, 'Pago'),
+(18, 18, '2024-03-18', 'Pix', 450.00, 'Pago'),
+(19, 19, '2024-03-19', 'Cart√£o de Cr√©dito', 750.00, 'Pago'),
+(20, 20, '2024-03-20', 'Dinheiro', 620.00, 'Pendente'),
+(21, 21, '2024-03-21', 'Pix', 290.00, 'Pago'),
+(22, 22, '2024-03-22', 'Cart√£o de Cr√©dito', 500.00, 'Pago'),
+(23, 23, '2024-03-23', 'Dinheiro', 1600.00, 'Pago'),
+(24, 24, '2024-03-24', 'Pix', 950.00, 'Pendente'),
+(25, 25, '2024-03-25', 'Cart√£o de Cr√©dito', 350.00, 'Pago');
 
 
 
