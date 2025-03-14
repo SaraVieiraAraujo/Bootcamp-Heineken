@@ -1,0 +1,90 @@
+#  📌 Utilizando  Microsoft Copilot para criar e popular um  banco de dados  para armazenar as cartas de Pokémon
+
+
+##  Explicação:
+
+✅ Tabela type:
+
+Armazena os tipos de Pokémon (e.g., Grass, Fire, Water).
+
+Cada tipo tem um identificador único (id) e um nome (typename).
+
+✅✅ Tabela stage:
+
+Armazena os estágios do Pokémon (e.g., Basic, Stage 1, Stage 2).
+
+Cada estágio tem um identificador único (id) e um nome (stagename).
+
+✅✅✅ Tabela collections:
+
+Armazena informações sobre os conjuntos de coleções (nome da coleção, data de lançamento, número total de cards).
+
+Coluna id é a chave primária.
+
+
+
+✅✅✅✅ Tabela cards:
+
+Inclui colunas type_id e stage_id como chaves estrangeiras, que se relacionam com as tabelas type e stage, respectivamente. Isso permite vincular cada carta a um tipo e estágio específicos.
+
+Relacionamentos:
+
+cards.type_id referencia type.id, garantindo que cada carta tenha um tipo válido.
+
+cards.stage_id referencia stage.id, garantindo que cada carta tenha um estágio válido.
+
+
+
+
+-----------------------------------------------------------------------------------------
+CREATE DATABASE PokemonTCG;
+GO
+
+USE PokemonTCG;
+GO
+
+-- Criar a tabela collections
+CREATE TABLE collections (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    collectionsetname NVARCHAR(255) NOT NULL,
+    release_date DATE,
+    totalcardsincollection INT
+);
+GO
+
+-- Criar a tabela type
+CREATE TABLE type (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    typename NVARCHAR(50) NOT NULL
+);
+GO
+
+-- Criar a tabela stage
+CREATE TABLE stage (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    stagename NVARCHAR(50) NOT NULL
+);
+GO
+
+-- Criar a tabela cards
+CREATE TABLE cards (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    informacoes NVARCHAR(MAX),
+    hp INT,
+    nome NVARCHAR(255) NOT NULL,
+    info NVARCHAR(MAX),
+    attack NVARCHAR(255),
+    damage NVARCHAR(50),
+    weak NVARCHAR(50),
+    ressis NVARCHAR(50),
+    retreat NVARCHAR(50),
+    cardnumber NVARCHAR(50),
+    collection_id INT,
+    type_id INT,
+    stage_id INT,
+    CONSTRAINT FK_Cards_Collections FOREIGN KEY (collection_id) REFERENCES collections(id),
+    CONSTRAINT FK_Cards_Type FOREIGN KEY (type_id) REFERENCES type(id),
+    CONSTRAINT FK_Cards_Stage FOREIGN KEY (stage_id) REFERENCES stage(id)
+);
+GO
+
