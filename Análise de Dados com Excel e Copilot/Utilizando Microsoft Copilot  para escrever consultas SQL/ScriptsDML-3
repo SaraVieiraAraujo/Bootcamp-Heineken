@@ -1,0 +1,22 @@
+INSERT INTO cards (informacoes, hp, nome, info, attack, damage, weak, ressis, retreat, cardnumber, collection_id, type_id, stage_id)
+VALUES 
+('Fire starter Pokémon', 60, 'Cyndaquil', 'Tiny Mouse Pokémon', 'Flame Wheel', '20', 'Water', 'None', '1', '155/102', 1, 2, 1),
+('Electric legendary Pokémon', 90, 'Zapdos', 'Legendary Bird', 'Thunderbolt', '60', 'Rock', 'Fighting', '2', '145/102', 3, 4, 1),
+('Grass Pokémon with healing ability', 70, 'Chikorita', 'Leaf Pokémon', 'Aromatherapy', '10', 'Fire', 'Water', '1', '152/102', 2, 1, 1),
+('Basic Darkness Pokémon', 80, 'Murkrow', 'Darkness Bird Pokémon', 'Night Slash', '30', 'Electric', 'Fighting', '1', '198/102', 1, 7, 1),
+('Water Pokémon card', 50, 'Psyduck', 'Duck Pokémon', 'Confusion Wave', '10', 'Electric', 'None', '1', '054/102', 1, 3, 1),
+('Psychic Evolved Pokémon', 110, 'Espeon', 'Sun Pokémon', 'Morning Sun', '40', 'Darkness', 'None', '1', '196/102', 3, 5, 2),
+('Fairy Pokémon', 50, 'Togepi', 'Spike Ball Pokémon', 'Sweet Kiss', '10', 'Poison', 'Fighting', '1', '175/102', 2, 9, 1),
+('Metal Snake Pokémon', 100, 'Onix', 'Rock Snake Pokémon', 'Iron Tail', '30', 'Grass', 'None', '4', '095/102', 1, 8, 1),
+('Stage 2 Grass Pokémon', 140, 'Venusaur', 'Seed Pokémon', 'Solar Beam', '90', 'Fire', 'Water', '4', '003/102', 2, 1, 3),
+('Basic Electric Pokémon', 70, 'Electabuzz', 'Electric Pokémon', 'Shock Wave', '50', 'Ground', 'Metal', '2', '125/102', 3, 4, 1),
+('Darkness Pokémon card', 60, 'Sableye', 'Gem Pokémon', 'Shadow Claw', '40', 'Bug', 'None', '1', '302/102', 3, 7, 1),
+('Dragon Pokémon card', 160, 'Rayquaza', 'Sky High Pokémon', 'Dragon Pulse', '120', 'Fairy', 'Fire', '3', '384/102', 2, 10, 2),
+('Fighting Pokémon card', 90, 'Hitmonchan', 'Punching Pokémon', 'Mega Punch', '50', 'Psychic', 'None', '2', '107/102', 3, 6, 1),
+('Fairy Pokémon', 60, 'Jigglypuff', 'Balloon Pokémon', 'Sing', '10', 'Darkness', 'Psychic', '1', '039/102', 1, 9, 1),
+('Basic Water Pokémon', 80, 'Totodile', 'Big Jaw Pokémon', 'Aqua Jet', '20', 'Electric', 'Grass', '1', '158/102', 3, 3, 1),
+('Stage 1 Fire Pokémon', 90, 'Quilava', 'Evolved Mouse Pokémon', 'Flame Thrower', '50', 'Water', 'None', '2', '156/102', 1, 2, 2),
+('Legendary Fire Pokémon', 120, 'Entei', 'Volcano Pokémon', 'Fire Spin', '80', 'Water', 'None', '3', '244/102', 2, 2, 1),
+('Colorless Pokémon card', 60, 'Meowth', 'Scratch Cat Pokémon', 'Pay Day', '10', 'Fighting', 'None', '1', '052/102', 1, 11, 1),
+('Psychic Ghost Pokémon', 80, 'Gengar', 'Shadow Pokémon', 'Shadow Ball', '90', 'Darkness', 'None', '3', '094/102', 2, 5, 3),
+('Stage 2 Grass Pokémon', 150, 'Torterra', 'Continent Pokémon', 'Leaf Storm', '100', 'Fire', 'Water', '4', '389/102', 3, 1, 3);

@@ -1,0 +1,37 @@
+INSERT INTO collections (collectionsetname, release_date, totalcardsincollection)
+VALUES 
+('Base Set', '1999-01-09', 102),
+('Jungle', '1999-06-16', 64),
+('Fossil', '1999-10-10', 62);
+
+
+INSERT INTO type (typename)
+VALUES 
+('Grass'),
+('Fire'),
+('Water'),
+('Electric'),
+('Psychic'),
+('Fighting'),
+('Darkness'),
+('Metal'),
+('Fairy'),
+('Dragon'),
+('Colorless');
+
+
+
+INSERT INTO stage (stagename)
+VALUES 
+('Basic'),
+('Stage 1'),
+('Stage 2');
+
+
+
+
+INSERT INTO cards (informacoes, hp, nome, info, attack, damage, weak, ressis, retreat, cardnumber, collection_id, type_id, stage_id)
+VALUES 
+('Rare card with shiny effect', 60, 'Pikachu', 'Electric Pokémon', 'Thunder Shock', '20', 'Fighting', 'Metal', '1', '58/102', 1, 4, 1),
+('Legendary bird Pokémon', 100, 'Articuno', 'Ice-type bird', 'Blizzard', '50', 'Fire', 'Grass', '3', '17/62', 3, 3, 1),
+('Starter Pokémon', 80, 'Charmeleon', 'Evolves into Charizard', 'Flamethrower', '50', 'Water', 'None', '2', '24/64', 2, 2, 2);
